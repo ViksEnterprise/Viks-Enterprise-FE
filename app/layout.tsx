@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Viks Enterprise",
+  title: "Viks Enterprise Ltd",
   description:
     "A UK-based company dedicated to delivering innovative solutions across technology, professional services and creative industries.",
 };
