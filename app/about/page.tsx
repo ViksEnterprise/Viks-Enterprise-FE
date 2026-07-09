@@ -31,7 +31,7 @@ export default function About() {
       <div className="flex w-full items-center justify-center lg:h-screen h-full py-5 mt-5">
         {!mobile ? (
           <div className="flex w-6xl items-center justify-between p-5 mt-7 pt-5">
-            <div className="grid gap-5 items-start w-xl text-[#64748B]">
+            <div className="grid gap-3 items-start w-xl text-[#64748B]">
               <h2 className="text-center text-[#0F172A] text-4xl font-semibold uppercase">
                 About
               </h2>
@@ -89,7 +89,7 @@ export default function About() {
           </div>
         ) : (
           <div className="relative w-full gap-4 h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/about-mb.jpg)]">
-            <div className="grid absolute h-full w-full bg-[#00000080] gap-3 items-start p-5 text-[#ffffff]">
+            <div className="grid absolute h-full w-full bg-[#00000080] gap-1 items-start p-5 text-[#ffffff]">
               <h2 className="text-center text-3xl font-semibold uppercase mt-5">
                 About
               </h2>
