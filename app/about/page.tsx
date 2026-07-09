@@ -35,28 +35,28 @@ export default function About() {
               <h2 className="text-center text-[#0F172A] text-4xl font-semibold uppercase">
                 About
               </h2>
-              <span className="text-base">
+              <span className="text-base m-0">
                 Viks Enterprise Ltd is a UK-based company dedicated to
                 delivering innovative solutions across technology, professional
                 services and creative industries.
               </span>
-              <span className="text-base">
+              <span className="text-base m-0">
                 Established with a vision to build sustainable and impactful
                 businesses, Viks Enterprise serves as the parent company
                 overseeing a growing portfolio of ventures.
               </span>
-              <span className="text-base">
+              <span className="text-base m-0">
                 Our operations currently include digital and technical services
                 through Viks Technologies, professional cleaning solutions
                 through Viks Cleaning, and creative opportunities through
                 ViksGallery.
               </span>
-              <span className="text-base">
+              <span className="text-base m-0">
                 Each division is designed to address specific market needs while
                 maintaining the values of quality, professionalism, innovation
                 and customer satisfaction.
               </span>
-              <span className="text-base">
+              <span className="text-base m-0">
                 At Viks Enterprise Ltd, we believe in creating opportunities,
                 empowering talent and delivering value-driven solutions that
                 help individuals and businesses grow. As we continue to expand,
@@ -93,28 +93,28 @@ export default function About() {
               <h2 className="text-center text-3xl font-semibold uppercase mt-5">
                 About
               </h2>
-              <span className="text-sm">
+              <span className="text-sm m-0">
                 Viks Enterprise Ltd is a UK-based company dedicated to
                 delivering innovative solutions across technology, professional
                 services and creative industries.
               </span>
-              <span className="text-sm">
+              <span className="text-sm m-0">
                 Established with a vision to build sustainable and impactful
                 businesses, Viks Enterprise serves as the parent company
                 overseeing a growing portfolio of ventures.
               </span>
-              <span className="text-sm">
+              <span className="text-sm m-0">
                 Our operations currently include digital and technical services
                 through Viks Technologies, professional cleaning solutions
                 through Viks Cleaning, and creative opportunities through
                 ViksGallery.
               </span>
-              <span className="text-sm">
+              <span className="text-sm m-0">
                 Each division is designed to address specific market needs while
                 maintaining the values of quality, professionalism, innovation
                 and customer satisfaction.
               </span>
-              <span className="text-sm">
+              <span className="text-sm m-0">
                 At Viks Enterprise Ltd, we believe in creating opportunities,
                 empowering talent and delivering value-driven solutions that
                 help individuals and businesses grow. As we continue to expand,
