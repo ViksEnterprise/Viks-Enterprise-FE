@@ -89,8 +89,8 @@ export default function About() {
           </div>
         ) : (
           <div className="relative w-full h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/about-mb.jpg)]">
-            <div className="flex flex-col absolute justify-center gap-3 h-full w-full bg-[#00000080] items-start p-5 text-[#ffffff]">
-              <h2 className="text-center text-3xl font-semibold uppercase mt-6 text-center flex items-center">
+            <div className="flex flex-col absolute justify-center gap-5 h-full w-full bg-[#00000080] items-start p-5 text-[#ffffff]">
+              <h2 className="text-center text-3xl font-semibold uppercase m-0 text-center flex items-center w-full">
                 About
               </h2>
               <span className="text-sm m-0">
