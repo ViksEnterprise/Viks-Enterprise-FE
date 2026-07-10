@@ -63,20 +63,22 @@ export default function Landing() {
         </section>
       ) : (
         <div className="relative w-full h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/hero.jpeg)]">
-          <div className="text-white w-full flex flex-col items-center gap-5 px-5 absolute h-full w-full bg-[#00000080] pt-6">
-            <h1 className="text-3xl font-extrabold uppercase mt-7 pt-5">
-              Welcome to Viks Enterprise
-            </h1>
+          <div className="w-full flex flex-col items-center gap-5 px-5 absolute h-full w-full bg-[#00000080] pt-6">
+            <div className="text-white w-full flex flex-col items-center gap-5 pt-6 mt-5">
+              <h1 className="text-3xl font-extrabold uppercase mt-7 pt-5">
+                Welcome to Viks Enterprise
+              </h1>
 
-            <p className="text-base w-full text-start">
-              Building scalable solutions across industries. We are a company
-              for innovation, creativity and excellence. Bringing diverse
-              companies together under one vision of progress.
-            </p>
+              <p className="text-base w-full text-start">
+                Building scalable solutions across industries. We are a company
+                for innovation, creativity and excellence. Bringing diverse
+                companies together under one vision of progress.
+              </p>
 
-            <button className="bg-[#D2AF61] hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
-              Explore our companies
-            </button>
+              <button className="bg-[#D2AF61] hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
+                Explore our companies
+              </button>
+            </div>
           </div>
         </div>
       )}
