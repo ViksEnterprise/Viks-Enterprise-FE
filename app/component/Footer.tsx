@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BiPhoneCall } from "react-icons/bi";
-import { BsInstagram, BsLinkedin, BsTiktok } from "react-icons/bs";
-import { FaCheck, FaXTwitter } from "react-icons/fa6";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 
 export default function Footer() {
