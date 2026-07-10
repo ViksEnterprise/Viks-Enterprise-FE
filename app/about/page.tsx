@@ -90,7 +90,7 @@ export default function About() {
         ) : (
           <div className="relative w-full h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/about-mb.jpg)]">
             <div className="flex flex-col absolute gap-5 h-full w-full bg-[#00000080] items-start p-5 text-[#ffffff]">
-              <h2 className="text-center text-3xl font-semibold uppercase mt-7 justify-center flex items-center w-full">
+              <h2 className="text-center text-3xl font-semibold uppercase mt-7 justify-center flex items-center w-full pt-5">
                 About
               </h2>
               <span className="text-base m-0">
