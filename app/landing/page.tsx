@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 
 export default function Landing() {
   const [mobile, setMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth <= 780 : false,
+    typeof window !== "undefined" ? window.innerWidth <= 650 : false,
   );
   const [isMounted, setIsMounted] = useState(false);
 
   const checkWindowWIdth = () => {
-    setMobile(window.innerWidth <= 765);
+    setMobile(window.innerWidth <= 650);
   };
 
   useEffect(() => {
@@ -28,16 +28,16 @@ export default function Landing() {
     <>
       {!mobile ? (
         <section className="relative overflow-hidden bg-[#12192f]">
-          <div className="grid lg:grid-cols-2 min-h-[650px]">
+          <div className="grid grid-cols-2 min-h-[650px]">
             <div className="relative flex items-center justify-center px-8 lg:px-20 py-20 z-1">
-              <div className="max-w-xl text-white px-5">
-                <h1 className="text-4xl font-extrabold leading-[155%] uppercase">
+              <div className="lg:w-xl w-full text-white px-5 relative z-1">
+                <h1 className="text-3xl lg:text-4xl font-extrabold leading-[155%] uppercase">
                   Welcome to
                   <br />
                   Viks Enterprise
                 </h1>
 
-                <p className="mt-8 text-lg leading-8 text-[#64748B]">
+                <p className="mt-8 lg:text-lg text-base leading-8 text-white">
                   Building scalable solutions across industries. We are a
                   company for innovation, creativity and excellence. Bringing
                   diverse companies together under one vision of progress.
@@ -63,12 +63,12 @@ export default function Landing() {
         </section>
       ) : (
         <div className="relative w-full h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/hero.jpeg)]">
-          <div className="text-white py-5 w-full flex flex-col items-center gap-5">
-            <h1 className="text-3xl font-extrabold uppercase">
+          <div className="text-white w-full flex flex-col items-center gap-5 px-5 absolute h-full w-full bg-[#00000080] pt-6">
+            <h1 className="text-3xl font-extrabold uppercase mt-7 pt-5">
               Welcome to Viks Enterprise
             </h1>
 
-            <p className="text-base text-[#64748B] w-full text-start">
+            <p className="text-base w-full text-start">
               Building scalable solutions across industries. We are a company
               for innovation, creativity and excellence. Bringing diverse
               companies together under one vision of progress.
