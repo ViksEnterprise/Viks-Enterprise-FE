@@ -1,5 +1,5 @@
 "use client";
-// import Footer from "@/app/component/Footer";
+import Footer from "@/app/component/Footer";
 
 export default function Policy() {
   return (
@@ -128,7 +128,7 @@ export default function Policy() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

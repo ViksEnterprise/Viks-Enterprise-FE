@@ -14,118 +14,77 @@ export default function Footer() {
     setDate(date);
   }, []);
   return (
-    <footer className="w-full h-fit">
-      <div className="w-full bg-[#0D05D2] px-5 py-3 flex items-center justify-between text-white flex-col h-full">
-        <div className="w-full flex items-center justify-center px-1 mb-5 pb-5">
-          <div className="md:w-[94%] w-full flex md:flex-row flex-col justify-between items-start md:gap-6 gap-7 py-6 flex-wrap">
+    <footer className="w-full h-fit bg-[#F5F7FA]">
+      <div className="w-full flex items-center justify-between flex-col h-full">
+        <div className="w-full px-5 py-3 flex items-center justify-center px-1 mb-5 pb-5">
+          <div className="md:w-[94%] w-full flex flex-col justify-between items-start md:gap-6 gap-7 py-6 flex-wrap">
             <div className="xl:w-88 lg:w-[40%] md:w-[50%] w-full flex flex-col gap-2">
               <Image
-                src="/img/logo-bg.jpg"
-                className="w-14 h-15"
-                alt=""
+                src="/img/logo.png"
+                className="w-28 h-20"
+                alt="logo"
                 height={100}
                 width={100}
               />
-              <h2 className="font-[500] text-2xl font-semibold uppercase">
-                Viks cleaning service
-              </h2>
-              <span className="font-[200] text-[0.95em]">
-                A leading provider of professional cleaning services.
-              </span>
             </div>
-            <div className="lg:w-[11%] md:w-[40%] flex flex-col gap-2">
-              <h2 className="text-xl font-bold">Navigation</h2>
-              <ul className="flex flex-col gap-2">
-                <li className="font-[200] text-[0.90em]">
-                  <a href="/">Home</a>
-                </li>
-                <li className="font-[200] text-[0.90em]">
-                  <a href="/about">About</a>
-                </li>
-                <li className="font-[200] text-[0.90em]">
-                  <a href="/services">Services</a>
-                </li>
-                <li className="font-[200] text-[0.90em]">
-                  <a href="/#terms-and-condition">Terms & Condition</a>
-                </li>
-                <li className="font-[200] text-[0.90em]">
-                  <a href="/#terms-and-condition">Privacy Policy</a>
-                </li>
-                <li className="font-[200] text-[0.90em]">
-                  <a href="/contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div className="lg:w-[15%] md:w-[40%] flex flex-col gap-3">
-              <span className="text-xl font-bold">Services we offer</span>
-              <div className="flex w-full flex-col gap-2">
-                <span className="font-[200] text-[0.90em] flex items-start gap-1">
-                  <div className="h-3 w-3 bg-white rounded-full text-blue-800 mt-1 flex items-center justify-center font-bold">
-                    <FaCheck size={10} />
-                  </div>
-                  Residential cleaning
-                </span>
-                <span className="font-[200] text-[0.90em] flex items-start gap-1">
-                  <div className="h-3 w-3 bg-white rounded-full text-blue-800 mt-1 flex items-center justify-center font-bold">
-                    <FaCheck size={10} />
-                  </div>
-                  Commercial cleaning
-                </span>
-                <span className="font-[200] text-[0.90em] flex items-start gap-1">
-                  <div className="h-3 w-3 bg-white rounded-full text-blue-800 mt-1 flex items-center justify-center font-bold">
-                    <FaCheck size={10} />
-                  </div>
-                  End of tenancy cleaning
-                </span>
-                <span className="font-[200] text-[0.90em] flex items-start gap-1">
-                  <div className="h-3 w-3 bg-white rounded-full text-blue-800 mt-1 flex items-center justify-center font-bold">
-                    <FaCheck size={10} />
-                  </div>
-                  Move-in / Move-out cleaning
-                </span>
-                <span className="font-[200] text-[0.90em] flex items-start gap-1">
-                  <div className="h-3 w-3 bg-white rounded-full text-blue-800 mt-1 flex items-center justify-center font-bold">
-                    <FaCheck size={10} />
-                  </div>
-                  Eco-friendly cleaning
-                </span>
-                <span className="font-[200] text-[0.90em] flex items-start gap-1">
-                  <div className="h-3 w-3 bg-white rounded-full text-blue-800 mt-1 flex items-center justify-center font-bold">
-                    <FaCheck size={10} />
-                  </div>
-                  One-off and deep cleaning
-                </span>
+            <div className="grid md:grid-cols-3 grid-cols-2 gap-5 w-full">
+              <div className="w-full flex flex-col gap-2">
+                <h2 className="text-lg uppercase font-bold">Quick Links</h2>
+                <ul className="flex flex-col gap-2">
+                  <li className="font-[200] text-[0.90em] text-[#64748B]">
+                    <a href="/">Home</a>
+                  </li>
+                  <li className="font-[200] text-[0.90em] text-[#64748B]">
+                    <a href="/about">About</a>
+                  </li>
+                  <li className="font-[200] text-[0.90em] text-[#64748B]">
+                    <a href="/terms">Terms & Condition</a>
+                  </li>
+                  <li className="font-[200] text-[0.90em] text-[#64748B]">
+                    <a href="/policy">Privacy Policy</a>
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div className="lg:w-[15%] md:w-[40%] flex flex-col gap-3">
-              <span className="text-xl font-bold capitalize">Contact us</span>
-              <div className="flex w-full flex-col gap-2">
-                <a
-                  href="tel:+447823972770"
-                  className="font-[200] text-[0.90em] flex items-center gap-1"
-                >
-                  <BiPhoneCall size={18} />
-                  +44 7823972770
-                </a>
-                <a
-                  href="mailto:vikscleaning@gmail.com"
-                  className="flex items-center font-[200] text-[0.90em] gap-1"
-                >
-                  <FiMail size={18} />
-                  vikscleaning@gmail.com
-                </a>
+              <div className="w-full flex flex-col gap-3">
+                <span className="text-lg uppercase font-bold">Companies</span>
+                <ul className="flex flex-col gap-2">
+                  <li className="font-[200] text-[0.90em] text-[#64748B] capitalize">
+                    <a href="https://vikscleaning.co.uk/">Viks cleaning</a>
+                  </li>
+                  <li className="font-[200] text-[0.90em] text-[#64748B] capitalize">
+                    <a href="https://viksgallery.com/">Viks gallery</a>
+                  </li>
+                  <li className="font-[200] text-[0.90em] text-[#64748B] capitalize">
+                    <a href="#">Viks tech enterprise</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="w-full flex flex-col gap-3">
+                <span className="text-lg uppercase font-bold">Contact</span>
+                <div className="flex w-full flex-col gap-2">
+                  <a
+                    href="mailto:vikscleaning@gmail.com"
+                    className="flex items-center font-[200] text-[0.90em] text-[#64748B] gap-1"
+                  >
+                    <FiMail size={18} />
+                    viksenterprise@gmail.com
+                  </a>
+                  <a
+                    href="tel:+447823972770"
+                    className="font-[200] text-[0.90em] text-[#64748B] flex items-center gap-1"
+                  >
+                    <BiPhoneCall size={18} />
+                    +44 7823972770
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-full text-center p-3 md:h-11 h-full pt-4 flex md:flex-row flex-col md:items-center items-end justify-between mt-5 gap-4">
+        <div className="w-full text-center bg-[#0F172A] p-5 h-full flex md:flex-row flex-col md:items-center items-end justify-between mt-5 gap-4">
           <div className="flex md:gap-5 gap-2 md:flex-row flex-col md:items-center items-end">
-            <span className="text-base font-medium">Follow us:</span>
             <div className="flex items-center gap-3 w-[fit]">
-              <a
-                href="https://www.instagram.com/"
-                className="text-white"
-              >
+              <a href="https://www.instagram.com/" className="text-white">
                 <BsInstagram size={15} />
               </a>
               <a
@@ -134,16 +93,13 @@ export default function Footer() {
               >
                 <BsLinkedin size={15} />
               </a>
-              <a
-                href="https://x.com"
-                className="text-white"
-              >
+              <a href="https://x.com" className="text-white">
                 <FaXTwitter size={15} />
               </a>
             </div>
           </div>
-          <span className="font-[200] text-[0.90em] md:w-fit w-full flex items-start gap-1">
-            &copy; {date} Viks Cleaning Service
+          <span className="font-[200] text-[0.90em] text-white md:w-fit w-full flex items-start gap-1">
+            &copy; All right reserved Viks Enterprise {date}
           </span>
         </div>
       </div>

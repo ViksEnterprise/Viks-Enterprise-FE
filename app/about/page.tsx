@@ -4,7 +4,7 @@ import Image from "next/image";
 // import { VALUE } from "../component/ts/values";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-// import Footer from "../component/Footer";
+import Footer from "../component/Footer";
 
 export default function About() {
   const [mobile, setMobile] = useState(
@@ -197,7 +197,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

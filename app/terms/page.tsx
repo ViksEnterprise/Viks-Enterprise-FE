@@ -1,5 +1,5 @@
 "use client";
-// import Footer from "@/app/component/Footer";
+import Footer from "@/app/component/Footer";
 
 export default function Terms() {
   return (
@@ -63,7 +63,7 @@ export default function Terms() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
