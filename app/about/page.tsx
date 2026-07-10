@@ -31,32 +31,32 @@ export default function About() {
       <div className="flex w-full items-center justify-center lg:h-screen h-full py-5 mt-5">
         {!mobile ? (
           <div className="flex w-6xl items-center justify-between p-5 mt-7 pt-5">
-            <div className="grid gap-5 items-start w-xl text-[#64748B]">
+            <div className="grid gap-3 items-start w-xl text-[#64748B]">
               <h2 className="text-center text-[#0F172A] text-4xl font-semibold uppercase">
                 About
               </h2>
-              <span className="text-base">
+              <span className="text-base m-0">
                 Viks Enterprise Ltd is a UK-based company dedicated to
                 delivering innovative solutions across technology, professional
                 services and creative industries.
               </span>
-              <span className="text-base">
+              <span className="text-base m-0">
                 Established with a vision to build sustainable and impactful
                 businesses, Viks Enterprise serves as the parent company
                 overseeing a growing portfolio of ventures.
               </span>
-              <span className="text-base">
+              <span className="text-base m-0">
                 Our operations currently include digital and technical services
                 through Viks Technologies, professional cleaning solutions
                 through Viks Cleaning, and creative opportunities through
                 ViksGallery.
               </span>
-              <span className="text-base">
+              <span className="text-base m-0">
                 Each division is designed to address specific market needs while
                 maintaining the values of quality, professionalism, innovation
                 and customer satisfaction.
               </span>
-              <span className="text-base">
+              <span className="text-base m-0">
                 At Viks Enterprise Ltd, we believe in creating opportunities,
                 empowering talent and delivering value-driven solutions that
                 help individuals and businesses grow. As we continue to expand,
@@ -88,33 +88,33 @@ export default function About() {
             </div>
           </div>
         ) : (
-          <div className="relative w-full gap-4 h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/about-mb.jpg)]">
-            <div className="grid absolute h-full w-full bg-[#00000080] gap-3 items-start p-5 text-[#ffffff]">
-              <h2 className="text-center text-3xl font-semibold uppercase mt-5">
+          <div className="relative w-full h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/about-mb.jpg)]">
+            <div className="flex flex-col absolute gap-5 h-full w-full bg-[#00000080] items-start p-5 text-[#ffffff]">
+              <h2 className="text-center text-3xl font-semibold uppercase mt-7 justify-center flex items-center w-full pt-5">
                 About
               </h2>
-              <span className="text-sm">
+              <span className="text-base m-0">
                 Viks Enterprise Ltd is a UK-based company dedicated to
                 delivering innovative solutions across technology, professional
                 services and creative industries.
               </span>
-              <span className="text-sm">
+              <span className="text-basw m-0">
                 Established with a vision to build sustainable and impactful
                 businesses, Viks Enterprise serves as the parent company
                 overseeing a growing portfolio of ventures.
               </span>
-              <span className="text-sm">
+              <span className="text-base m-0">
                 Our operations currently include digital and technical services
                 through Viks Technologies, professional cleaning solutions
                 through Viks Cleaning, and creative opportunities through
                 ViksGallery.
               </span>
-              <span className="text-sm">
+              <span className="text-base m-0">
                 Each division is designed to address specific market needs while
                 maintaining the values of quality, professionalism, innovation
                 and customer satisfaction.
               </span>
-              <span className="text-sm">
+              <span className="text-base m-0">
                 At Viks Enterprise Ltd, we believe in creating opportunities,
                 empowering talent and delivering value-driven solutions that
                 help individuals and businesses grow. As we continue to expand,
