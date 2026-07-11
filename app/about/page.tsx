@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-// import { VALUE } from "../component/ts/values";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Footer from "../component/Footer";
+import { ABOUT } from "../component/ts/home";
 
 export default function About() {
   const [mobile, setMobile] = useState(
@@ -127,48 +127,32 @@ export default function About() {
         )}
       </div>
       <hr className="text-[#BDBDBD]" />
-      {/* <div className="flex w-full items-center justify-center lg:h-screen h-full bg-[#4942ea] text-white mt-3">
-        <div className="flex md:w-6xl w-full p-5">
-          <div className="grid justify-between space-y-8 h-full items-start w-full overflow-hidden">
-            <motion.h2
-              whileInView={"visible"}
-              transition={{ duration: 1.2 }}
-              initial="hidden"
-              variants={{
-                hidden: { x: -120, opacity: 0 },
-                visible: { x: 0, opacity: 1 },
-              }}
-              className="text-center text-3xl font-semibold uppercase md:mb-5 mb-2"
-            >
-              Our values
-            </motion.h2>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols md:mt-5 mt-0 pt-5 gap-5 overflow-hidden">
-              {VALUE.map((val, i) => {
-                const Icon = val.icon;
-                return (
-                  <motion.div
-                    whileInView={"visible"}
-                    transition={{ duration: 1.2 }}
-                    initial="hidden"
-                    variants={{
-                      hidden: { y: 90, opacity: 0 },
-                      visible: { y: 0, opacity: 1 },
-                    }}
-                    className="h-54 rounded-lg flex flex-col gap-4 border-white border px-5 justify-center md:mt-5 mt-3"
-                    key={i}
-                  >
-                    <div className="h-7 w-7 rounded-full bg-[#FF0000] relative flex items-start justify-end">
-                      <Icon className="absolute -end-2" size={22} />
-                    </div>
-                    <h6 className="text-3xl">{val.name}</h6>
-                    <span className="text-sm">{val.text}</span>
-                  </motion.div>
-                );
-              })}
-            </div>
+      <section className="w-full my-5 flex items-center justify-center">
+        <div className="flex items-center justify-center p-3 my-3 pb-6 flex-col gap-8 sm:w-[90%] w-full">
+          <div className="grid sm:grid-cols-2 grid-cols w-full gap-7 lg:px-9 md:px-5 px-3">
+            {ABOUT.map((item, i) => (
+              <motion.div
+                whileInView={"visible"}
+                transition={{ duration: 1.2 }}
+                initial="hidden"
+                variants={{
+                  hidden: { scale: 0 },
+                  visible: { scale: 1 },
+                }}
+                className="h-[fit] w-full flex flex-col gap-3"
+                key={i}
+              >
+                <div className="flex flex-col gap-3 w-full border-solid border-1 border-slate-300 p-5 rounded-[8px] h-48 justify-center shadow-md text-center">
+                  <h6 className="font-[800] text-lg uppercase flex flex-col items-center gap-3 w-full">
+                    {item.title}
+                  </h6>
+                  <p className="font-[200] text-lg leading-6">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div> */}
+      </section>
       <hr className="text-[#BDBDBD]" />
       <div className="flex w-full items-center justify-center h-72">
         <div className="flex md:w-6xl w-full items-center justify-between p-5">

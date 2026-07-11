@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className="w-full h-fit bg-[#F5F7FA]">
       <div className="w-full flex items-center justify-between flex-col h-full">
         <div className="w-full px-5 py-3 flex items-center justify-center px-1 mb-5 pb-5">
-          <div className="md:w-[94%] w-full flex flex-col justify-between items-start md:gap-6 gap-7 py-6 flex-wrap">
+          <div className="md:w-[90%] w-full flex flex-col justify-between items-start md:gap-6 gap-7 py-6 flex-wrap">
             <div className="xl:w-88 lg:w-[40%] md:w-[50%] w-full flex flex-col gap-2">
               <Image
                 src="/img/logo.png"
