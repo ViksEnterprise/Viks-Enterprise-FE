@@ -101,7 +101,7 @@ export default function Landing() {
             </motion.h5>
             <div className="w-full h-[0.62px] bg-[#0F172A] absolute bottom-0 left-0 top-4 -z-1"></div>
           </div>
-          <div className="grid sm:grid-cols-4 grid-cols-2 w-full gap-3 lg:px-9 md:px-5 px-3">
+          <div className="grid sm:grid-cols-4 grid-cols-2 w-full gap-5 lg:px-9 md:px-5 px-3">
             {WE.map((item, i) => (
               <motion.div
                 whileInView={"visible"}
