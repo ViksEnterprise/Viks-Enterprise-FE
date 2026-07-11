@@ -188,7 +188,7 @@ export default function About() {
                 width={500}
               />
 
-              <div className="absolute left-[-2em] -top-12 w-[41em] bg-[#F5F5F5] rotate-[9deg] h-[140em]"></div>
+              <div className="absolute left-[-2em] -top-12 w-[41em] bg-[#ffffff] rotate-[9deg] h-[140em]"></div>
             </div>
           </div>
         </section>
@@ -224,8 +224,8 @@ export default function About() {
                 width={500}
               />
 
-              <div className="absolute left-[-1em] bottom-[-8em] w-[12em] bg-[#F5F5F5] rotate-[30deg] h-full"></div>
-              <div className="absolute right-[-1em] bottom-[-8em] w-[12em] bg-[#F5F5F5] rotate-[-30deg] h-full"></div>
+              <div className="absolute left-[-1em] bottom-[-8em] w-[12em] bg-[#ffffff] rotate-[30deg] h-full"></div>
+              <div className="absolute right-[-1em] bottom-[-8em] w-[12em] bg-[#ffffff] rotate-[-30deg] h-full"></div>
             </div>
           </div>
         </section>
