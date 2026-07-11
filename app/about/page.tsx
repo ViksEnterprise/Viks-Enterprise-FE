@@ -197,7 +197,7 @@ export default function About() {
           <div className="max-w-7xl mx-auto grid">
             <div className="flex items-center px-5 py-10">
               <div className="max-w-md text-white flex flex-col">
-                <h2 className="text-4xl font-bold uppercase mb-8">
+                <h2 className="text-3xl font-bold uppercase mb-8">
                   Why choose us
                 </h2>
                 <div className="flex flex-col gap-5 mt-3">
