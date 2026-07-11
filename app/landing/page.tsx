@@ -127,40 +127,84 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <section className="bg-[#12192f] overflow-hidden">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2">
-          <div className="flex items-center px-8 lg:px-20 py-20">
-            <div className="max-w-md text-white flex flex-col">
-              <h2 className="text-4xl font-bold uppercase mb-8">About Us</h2>
-              <p className="text-base leading-8">
-                Viks Enterprise Ltd is a UK-based company dedicated to
-                delivering innovative solutions across technology, professional
-                services and creative industries.
-              </p>
-              <p className="text-base leading-8 mt-6">
-                Established with a vision to build sustainable and impactful
-                businesses, Viks Enterprise serves as the parent company
-                overseeing a growing portfolio of ventures.
-              </p>
-              <a href="/about" className="mt-5 bg-[#C8A96A] hover:bg-[#bf9b4e] text-white font-semibold px-10 py-3 w-fit rounded">
-                Learn More
-              </a>
+      {!mobile ? (
+        <section className="bg-[#12192f] overflow-hidden">
+          <div className="max-w-7xl mx-auto grid sm:grid-cols-2">
+            <div className="flex items-center px-8 lg:px-20 py-20">
+              <div className="max-w-md text-white flex flex-col">
+                <h2 className="text-4xl font-bold uppercase mb-8">About Us</h2>
+                <p className="text-base leading-8">
+                  Viks Enterprise Ltd is a UK-based company dedicated to
+                  delivering innovative solutions across technology,
+                  professional services and creative industries.
+                </p>
+                <p className="text-base leading-8 mt-6">
+                  Established with a vision to build sustainable and impactful
+                  businesses, Viks Enterprise serves as the parent company
+                  overseeing a growing portfolio of ventures.
+                </p>
+                <a
+                  href="/about"
+                  className="mt-5 bg-[#C8A96A] hover:bg-[#bf9b4e] text-white font-semibold px-10 py-3 w-fit rounded"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            <div className="relative pt-8">
+              <Image
+                src="/img/about_img.jpg"
+                alt=""
+                className="w-full h-full relative z-1"
+                height={500}
+                width={500}
+              />
+
+              <div className="absolute left-[-2em] -top-12 w-[41em] bg-[#F5F5F5] rotate-[9deg] h-[140em]"></div>
             </div>
           </div>
+        </section>
+      ) : (
+        <section className="bg-[#12192f] overflow-hidden">
+          <div className="max-w-7xl mx-auto grid">
+            <div className="flex items-center px-5 py-10">
+              <div className="max-w-md text-white flex flex-col">
+                <h2 className="text-3xl font-bold uppercase mb-6">About Us</h2>
+                <p className="text-base leading-7">
+                  Viks Enterprise Ltd is a UK-based company dedicated to
+                  delivering innovative solutions across technology,
+                  professional services and creative industries.
+                </p>
+                <p className="text-base leading-7 mt-4">
+                  Established with a vision to build sustainable and impactful
+                  businesses, Viks Enterprise serves as the parent company
+                  overseeing a growing portfolio of ventures.
+                </p>
+                <a
+                  href="/about"
+                  className="mt-5 bg-[#C8A96A] hover:bg-[#bf9b4e] text-white font-semibold px-10 py-3 w-fit rounded"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
 
-          <div className="relative pt-8">
-            <Image
-              src="/img/about_img.jpg"
-              alt=""
-              className="w-full h-full relative z-1"
-              height={500}
-              width={500}
-            />
+            <div className="relative pt-8 px-5">
+              <Image
+                src="/img/about_img.jpg"
+                alt=""
+                className="w-full h-full relative z-1"
+                height={500}
+                width={500}
+              />
 
-            <div className="absolute left-[-2em] -top-12 w-[41em] bg-[#F5F5F5] rotate-[9deg] h-[140em]"></div>
+              <div className="absolute left-[-1em] bottom-[-8em] w-[12em] bg-[#F5F5F5] rotate-[30deg] h-full"></div>
+              <div className="absolute right-[-1em] bottom-[-8em] w-[12em] bg-[#F5F5F5] rotate-[-30deg] h-full"></div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
       <Footer />
     </>
   );
