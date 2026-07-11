@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Footer from "../component/Footer";
-import { ABOUT } from "../component/ts/home";
+import { ABOUT, WHY } from "../component/ts/home";
+import { BiCheck } from "react-icons/bi";
 
 export default function About() {
   const [mobile, setMobile] = useState(
@@ -146,41 +147,89 @@ export default function About() {
                   <h6 className="font-[800] text-lg uppercase flex flex-col items-center gap-3 w-full">
                     {item.title}
                   </h6>
-                  <p className="font-[200] text-lg leading-6">{item.description}</p>
+                  <p className="font-[200] text-lg leading-6">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-      <hr className="text-[#BDBDBD]" />
-      <div className="flex w-full items-center justify-center h-72">
-        <div className="flex md:w-6xl w-full items-center justify-between p-5">
-          <div className="flex flex-col gap-6 items-center w-full text-center overflow-hidden">
-            <motion.h2
-              whileInView={"visible"}
-              transition={{ duration: 1.2 }}
-              initial="hidden"
-              variants={{
-                hidden: { x: -120, opacity: 0 },
-                visible: { x: 0, opacity: 1 },
-              }}
-              className="text-center text-[#00008B] text-4xl font-semibold"
-            >
-              If you have any questions
-            </motion.h2>
-            <span className="text-base font-medium">
-              Feel free to contact us by clicking on the button
-            </span>
-            <a
-              href="/contact"
-              className="bg-[#0C06AC] text-sm h-11 flex items-center justify-center w-42 cursor-pointer rounded-lg text-white p-3 px-4 m-0"
-            >
-              Contact us
-            </a>
+      {!mobile ? (
+        <section className="bg-[#12192f] overflow-hidden">
+          <div className="max-w-7xl mx-auto grid sm:grid-cols-2">
+            <div className="flex items-center px-8 lg:px-20 py-20">
+              <div className="max-w-md text-white flex flex-col">
+                <h2 className="text-4xl font-bold uppercase mb-8">
+                  Why choose us
+                </h2>
+                <div className="flex flex-col gap-5 mt-3">
+                  {WHY.map((item, i) => (
+                    <div className="flex items-center gap-5" key={i}>
+                      <div className="h-7 w-7 rounded-full bg-[#C8A96A] relative flex items-start justify-end">
+                        <div className="absolute -end-2 rounded-full p-1 border border-white">
+                          <BiCheck size={14} />
+                        </div>
+                      </div>
+                      <span className="text-base">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="relative pt-8">
+              <Image
+                src="/img/about-sec.jpg"
+                alt=""
+                className="w-full h-full relative z-1"
+                height={500}
+                width={500}
+              />
+
+              <div className="absolute left-[-2em] -top-12 w-[41em] bg-[#F5F5F5] rotate-[9deg] h-[140em]"></div>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      ) : (
+        <section className="bg-[#12192f] overflow-hidden">
+          <div className="max-w-7xl mx-auto grid">
+            <div className="flex items-center px-5 py-10">
+              <div className="max-w-md text-white flex flex-col">
+                <h2 className="text-4xl font-bold uppercase mb-8">
+                  Why choose us
+                </h2>
+                <div className="flex flex-col gap-5 mt-3">
+                  {WHY.map((item, i) => (
+                    <div className="flex items-center gap-5" key={i}>
+                      <div className="h-7 w-7 rounded-full bg-[#C8A96A] relative flex items-start justify-end">
+                        <div className="absolute -end-2 rounded-full p-1 border border-white">
+                          <BiCheck size={14} />
+                        </div>
+                      </div>
+                      <span className="text-base">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="relative pt-8 px-5">
+              <Image
+                src="/img/about-sec.jpg"
+                alt=""
+                className="w-full h-full relative z-1"
+                height={500}
+                width={500}
+              />
+
+              <div className="absolute left-[-1em] bottom-[-8em] w-[12em] bg-[#F5F5F5] rotate-[30deg] h-full"></div>
+              <div className="absolute right-[-1em] bottom-[-8em] w-[12em] bg-[#F5F5F5] rotate-[-30deg] h-full"></div>
+            </div>
+          </div>
+        </section>
+      )}
       <Footer />
     </div>
   );

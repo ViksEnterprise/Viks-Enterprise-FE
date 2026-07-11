@@ -32,4 +32,11 @@ const ABOUT = [
   },
 ];
 
-export { WE, ABOUT };
+const WHY = [
+  "Structured Operations",
+  "Multi-Industry Expertise",
+  "Reliable Service",
+  "Growth Focused",
+];
+
+export { WE, ABOUT, WHY };

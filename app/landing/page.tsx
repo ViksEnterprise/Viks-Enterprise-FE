@@ -32,7 +32,7 @@ export default function Landing() {
         <section className="relative overflow-hidden bg-[#12192f]">
           <div className="grid grid-cols-2 min-h-[650px]">
             <div className="relative flex items-center justify-center px-8 lg:px-20 py-20 z-1">
-              <div className="lg:w-xl w-full text-white px-5 relative z-1">
+              <div className="w-xl text-white px-5 relative z-1 flex flex-col">
                 <h1 className="text-3xl lg:text-4xl font-extrabold leading-[155%] uppercase">
                   Welcome to
                   <br />
@@ -45,9 +45,9 @@ export default function Landing() {
                   diverse companies together under one vision of progress.
                 </p>
 
-                <button className="mt-10 bg-[#C2A302] hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-10 py-4 rounded-xl cursor-pointer">
+                <a href="/#companies" className="mt-10 bg-[#C2A302] w-fit hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-10 py-4 rounded-xl cursor-pointer">
                   Explore our companies
-                </button>
+                </a>
               </div>
               <div className="absolute right-[-5.22em] top-0 w-[150px] h-full bg-[#12192f] rotate-[15deg]"></div>
             </div>
@@ -77,9 +77,9 @@ export default function Landing() {
                 companies together under one vision of progress.
               </p>
 
-              <button className="bg-[#C2A302] hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
+              <a href="/#companies" className="bg-[#C2A302] w-fit hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
                 Explore our companies
-              </button>
+              </a>
             </div>
           </div>
         </div>
