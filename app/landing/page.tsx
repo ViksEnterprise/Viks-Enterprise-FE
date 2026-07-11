@@ -86,7 +86,7 @@ export default function Landing() {
       )}
       <section className="w-full my-5">
         <div className="flex items-center w-full justify-center p-3 my-3 pb-6 flex-col gap-8">
-          <div className="text-3xl uppercase text-center relative sm:w-[40%] w-full flex items-center justify-center">
+          <div className="text-3xl uppercase text-center relative sm:w-[40%] w-[92%] flex items-center justify-center">
             <motion.h5
               whileInView={"visible"}
               transition={{ duration: 1.2 }}
