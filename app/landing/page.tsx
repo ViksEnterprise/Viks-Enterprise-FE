@@ -4,7 +4,7 @@ import Image from "next/image";
 import Footer from "../component/Footer";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { WE } from "../component/ts/home";
+import { COMPANIES, WE } from "../component/ts/home";
 
 export default function Landing() {
   const [mobile, setMobile] = useState(
@@ -45,7 +45,10 @@ export default function Landing() {
                   diverse companies together under one vision of progress.
                 </p>
 
-                <a href="/#companies" className="mt-10 bg-[#C2A302] w-fit hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-10 py-4 rounded-xl cursor-pointer">
+                <a
+                  href="/#companies"
+                  className="mt-10 bg-[#C2A302] w-fit hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-10 py-4 rounded-xl cursor-pointer"
+                >
                   Explore our companies
                 </a>
               </div>
@@ -77,7 +80,10 @@ export default function Landing() {
                 companies together under one vision of progress.
               </p>
 
-              <a href="/#companies" className="bg-[#C2A302] w-fit hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
+              <a
+                href="/#companies"
+                className="bg-[#C2A302] w-fit hover:bg-[#bf9b4e] transition-all duration-300 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer"
+              >
                 Explore our companies
               </a>
             </div>
@@ -205,6 +211,61 @@ export default function Landing() {
           </div>
         </section>
       )}
+      <section className="w-full mb-5 pt-3" id="companies">
+        <div className="pt-5 mt-6">
+          <div className="pt-5 mt-5 flex items-center justify-center w-full">
+            <div className="flex items-center md:w-[90%] w-full justify-center p-3 my-3 pb-6 flex-col gap-11">
+              <div className="text-3xl uppercase text-center relative sm:w-[40%] w-[92%] flex items-center justify-center">
+                <motion.h5
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+                  className="bg-white w-fit uppercase font-bold text-[#0F172A] px-3 rounded-md z-1"
+                >
+                  Our companies
+                </motion.h5>
+                <div className="w-full h-[0.62px] bg-[#0F172A] absolute bottom-0 left-0 top-4 -z-1"></div>
+              </div>
+              <div className="grid md:grid-cols-2 grid-col md:items-center items-start justify-start md:w-[80%] w-full gap-6 md:px-7 px-1">
+                {COMPANIES.map((item, i) => (
+                  <motion.div
+                    whileInView={"visible"}
+                    initial="hidden"
+                    transition={{ duration: 1 }}
+                    key={i}
+                  >
+                    <div className="flex flex-col gap-2 w-full rounded-lg shadow-md h-[fit] overflow-hidden">
+                      <Image
+                        className="w-full h-84"
+                        src={`${item.img}`}
+                        alt=""
+                        width={900}
+                        height={450}
+                      />
+                      <div className="py-3 pb-5 px-6 flex flex-col items-center gap-6 text-center">
+                        <h6 className="font-semibold text-2xl capitalize m-0 border-b border-[#3333334D] pb-5 w-full">
+                          {item.name}
+                        </h6>
+                        <span className="text-base my-2">{item.text}</span>
+                        <a
+                          className="font-semibold text-sm leading-6 p-5 flex items-center justify-center gap-2 bg-[#C8A96A] w-86 rounded-lg uppercase text-[#FFFFFF] mt-2"
+                          href={item.link}
+                        >
+                          Visit our website
+                        </a>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </>
   );

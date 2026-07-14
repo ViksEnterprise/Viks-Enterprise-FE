@@ -39,4 +39,25 @@ const WHY = [
   "Growth Focused",
 ];
 
-export { WE, ABOUT, WHY };
+const COMPANIES = [
+  {
+    name: "Viks Cleaning",
+    img: "/img/cleaning.jpg",
+    link: "https://vikscleaning.co.uk/",
+    text: "Professional cleaning services for homes and offices. Ensuring spotless spaces with quality care.",
+  },
+  {
+    name: "Viks Gallery",
+    img: "/img/art.jpg",
+    link: "https://viksgallery.com/",
+    text: "Discover and purchase exquisite artworks for your collections. Bringing fine arts to your space.",
+  },
+  {
+    name: "VT",
+    img: "/img/tech.jpg",
+    link: "#",
+    text: "Creative solutions for branding, web design and digital experiences. Turning ideas into visual impact..",
+  },
+];
+
+export { WE, ABOUT, WHY, COMPANIES };
