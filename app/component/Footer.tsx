@@ -63,10 +63,10 @@ export default function Footer() {
                 <span className="text-lg uppercase font-bold">Contact</span>
                 <div className="flex w-full flex-col gap-2">
                   <a
-                    href="mailto:vikscleaning@gmail.com"
+                    href="mailto:viksenterprise@gmail.com"
                     className="flex items-center font-[200] text-[0.90em] text-black gap-1"
                   >
-                    <FiMail size={18} />
+                    <FiMail size={19} />
                     viksenterprise@gmail.com
                   </a>
                   <a
