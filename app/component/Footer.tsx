@@ -31,16 +31,16 @@ export default function Footer() {
               <div className="w-full flex flex-col gap-2">
                 <h2 className="text-lg uppercase font-bold">Quick Links</h2>
                 <ul className="flex flex-col gap-2">
-                  <li className="font-[200] text-[0.90em] text-[#64748B]">
+                  <li className="font-[200] text-[0.90em] text-black">
                     <a href="/">Home</a>
                   </li>
-                  <li className="font-[200] text-[0.90em] text-[#64748B]">
+                  <li className="font-[200] text-[0.90em] text-black">
                     <a href="/about">About</a>
                   </li>
-                  <li className="font-[200] text-[0.90em] text-[#64748B]">
+                  <li className="font-[200] text-[0.90em] text-black">
                     <a href="/terms">Terms & Condition</a>
                   </li>
-                  <li className="font-[200] text-[0.90em] text-[#64748B]">
+                  <li className="font-[200] text-[0.90em] text-black">
                     <a href="/policy">Privacy Policy</a>
                   </li>
                 </ul>
@@ -48,30 +48,30 @@ export default function Footer() {
               <div className="w-full flex flex-col gap-3">
                 <span className="text-lg uppercase font-bold">Companies</span>
                 <ul className="flex flex-col gap-2">
-                  <li className="font-[200] text-[0.90em] text-[#64748B] capitalize">
+                  <li className="font-[200] text-[0.90em] text-black capitalize">
                     <a href="https://vikscleaning.co.uk/">Viks cleaning</a>
                   </li>
-                  <li className="font-[200] text-[0.90em] text-[#64748B] capitalize">
+                  <li className="font-[200] text-[0.90em] text-black capitalize">
                     <a href="https://viksgallery.com/">Viks gallery</a>
                   </li>
-                  <li className="font-[200] text-[0.90em] text-[#64748B] capitalize">
+                  <li className="font-[200] text-[0.90em] text-black capitalize">
                     <a href="#">Viks tech enterprise</a>
                   </li>
                 </ul>
               </div>
-              <div className="w-full flex flex-col gap-3">
+              <div className="w-full flex flex-col gap-3" id="contact">
                 <span className="text-lg uppercase font-bold">Contact</span>
                 <div className="flex w-full flex-col gap-2">
                   <a
                     href="mailto:vikscleaning@gmail.com"
-                    className="flex items-center font-[200] text-[0.90em] text-[#64748B] gap-1"
+                    className="flex items-center font-[200] text-[0.90em] text-black gap-1"
                   >
                     <FiMail size={18} />
                     viksenterprise@gmail.com
                   </a>
                   <a
                     href="tel:+447823972770"
-                    className="font-[200] text-[0.90em] text-[#64748B] flex items-center gap-1"
+                    className="font-[200] text-[0.90em] text-black flex items-center gap-1"
                   >
                     <BiPhoneCall size={18} />
                     +44 7823972770

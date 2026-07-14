@@ -127,7 +127,6 @@ export default function About() {
           </div>
         )}
       </div>
-      <hr className="text-[#BDBDBD]" />
       <section className="w-full my-5 flex items-center justify-center">
         <div className="flex items-center justify-center p-3 my-3 pb-6 flex-col gap-8 sm:w-[90%] w-full">
           <div className="grid sm:grid-cols-2 grid-cols w-full gap-7 lg:px-9 md:px-5 px-3">
