@@ -20,8 +20,8 @@ export default function Footer() {
           <div className="md:w-[90%] w-full flex flex-col justify-between items-start md:gap-6 gap-7 py-6 flex-wrap">
             <div className="xl:w-88 lg:w-[40%] md:w-[50%] w-full flex flex-col gap-2">
               <Image
-                src="/img/logo.png"
-                className="w-28 h-20"
+                src="/img/logo1.png"
+                className="w-34 h-18"
                 alt="logo"
                 height={100}
                 width={100}
