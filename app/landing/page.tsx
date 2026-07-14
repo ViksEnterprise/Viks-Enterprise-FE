@@ -30,7 +30,7 @@ export default function Landing() {
     <>
       {!mobile ? (
         <section className="relative overflow-hidden bg-[#12192f]">
-          <div className="grid grid-cols-2 min-h-[650px]">
+          <div className="grid grid-cols-2 h-screen">
             <div className="relative flex items-center justify-center px-8 lg:px-20 py-20 z-1">
               <div className="w-xl text-white px-5 relative z-1 flex flex-col">
                 <h1 className="text-3xl lg:text-4xl font-extrabold leading-[155%] uppercase">
@@ -230,7 +230,7 @@ export default function Landing() {
                 </motion.h5>
                 <div className="w-full h-[0.62px] bg-[#0F172A] absolute bottom-0 left-0 top-4 -z-1"></div>
               </div>
-              <div className="grid md:grid-cols-2 grid-col md:items-center items-start justify-start md:w-[80%] w-full gap-6 md:px-7 px-1">
+              <div className="grid md:grid-cols-2 grid-cols md:items-center items-start justify-start md:w-[80%] w-full gap-6 md:px-7 px-1">
                 {COMPANIES.map((item, i) => (
                   <motion.div
                     whileInView={"visible"}
@@ -252,7 +252,7 @@ export default function Landing() {
                         </h6>
                         <span className="text-base my-2">{item.text}</span>
                         <a
-                          className="font-semibold text-sm leading-6 p-5 flex items-center justify-center gap-2 bg-[#C8A96A] w-86 rounded-lg uppercase text-[#FFFFFF] mt-2"
+                          className="font-semibold text-sm leading-6 p-5 flex items-center justify-center gap-2 bg-[#C8A96A] md:w-86 w-full rounded-lg uppercase text-[#FFFFFF] mt-2"
                           href={item.link}
                         >
                           Visit our website
