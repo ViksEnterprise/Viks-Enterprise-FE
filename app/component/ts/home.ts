@@ -53,7 +53,7 @@ const COMPANIES = [
     text: "Discover and purchase exquisite artworks for your collections. Bringing fine arts to your space.",
   },
   {
-    name: "VT",
+    name: "VTech",
     img: "/img/tech.jpg",
     link: "#",
     text: "Creative solutions for branding, web design and digital experiences. Turning ideas into visual impact..",
