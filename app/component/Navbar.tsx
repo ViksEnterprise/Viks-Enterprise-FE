@@ -60,7 +60,7 @@ export default function NavBar() {
           <div className="w-[fit] h-fit">
             <Image
               src="/img/logo2.png"
-              className="h-12"
+              className="h-18"
               alt="logo"
               height={100}
               width={100}
@@ -91,7 +91,7 @@ export default function NavBar() {
           <div className="w-[fit] h-fit">
             <Image
               src="/img/logo2.png"
-              className="h-12"
+              className="h-18"
               alt="logo"
               height={100}
               width={100}
