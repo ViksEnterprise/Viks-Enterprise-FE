@@ -30,7 +30,7 @@ export default function Landing() {
     <>
       {!mobile ? (
         <section className="relative overflow-hidden bg-[#12192f]">
-          <div className="grid grid-cols-2 h-screen">
+          <div className="grid grid-cols-2 min-h-[658px]">
             <div className="relative flex items-center justify-center px-8 lg:px-20 py-20 z-1">
               <div className="w-xl text-white px-5 relative z-1 flex flex-col">
                 <h1 className="text-3xl lg:text-4xl font-extrabold leading-[155%] uppercase">
