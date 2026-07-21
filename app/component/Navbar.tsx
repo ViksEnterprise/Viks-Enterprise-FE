@@ -73,7 +73,7 @@ export default function NavBar() {
                 {NAVBAROUTE.map((item, i) => (
                   <li key={i} className="text-sm uppercase">
                     <a
-                      className={`${`font-[200] ${
+                      className={`${`font-[200] hover:text-[#FFD700]/80 ${
                         pathname === item.url ? "text-[#FFD700]" : "text-white"
                       }`}`}
                       href={`${item.url}`}
