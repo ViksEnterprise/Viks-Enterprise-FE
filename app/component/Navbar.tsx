@@ -15,6 +15,7 @@ export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+
   const checkWindowWIdth = () => {
     setMobile(window.innerWidth <= 765);
   };
