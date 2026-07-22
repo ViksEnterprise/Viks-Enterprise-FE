@@ -36,9 +36,9 @@ export default function Footer() {
     setDate(date);
   }, []);
   return (
-    <footer className="w-full md:h-screen h-svh bg-[#F5F7FA]" id="contact">
-      <div className="w-full flex items-center justify-between flex-col h-full">
-        <div className="w-full px-5 py-3 flex items-center justify-center px-1 mb-5 pb-5">
+    <footer className="w-full md:h-screen h-svh bg-[#F5F7FA] pt-4" id="contact">
+      <div className="w-full flex items-center justify-between flex-col h-full pt-5">
+        <div className="md:w-[95%] w-full px-5 py-3 flex items-center justify-center px-1 mb-5 pb-5">
           <div className="md:w-[90%] w-full flex flex-col justify-between items-start md:gap-6 gap-7 py-6 flex-wrap">
             <div className="xl:w-88 lg:w-[40%] md:w-[50%] w-full flex flex-col gap-2">
               <Image
@@ -103,26 +103,28 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="w-full text-center bg-[#0F172A] p-5 h-fit flex md:flex-row flex-col md:items-center items-end justify-between mt-5 gap-4">
-          <div className="flex md:gap-5 gap-2 md:flex-row flex-col md:items-center items-end">
-            <div className="flex items-center gap-3 w-[fit]">
-              <a href="https://www.instagram.com/" className="text-white">
-                <BsInstagram size={15} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/"
-                className="text-white"
-              >
-                <BsLinkedin size={15} />
-              </a>
-              <a href="https://x.com" className="text-white">
-                <FaXTwitter size={15} />
-              </a>
+        <div className="w-full bg-[#0F172A] h-fit flex items-center justify-center mt-5">
+          <div className="md:w-[85%] w-full text-center p-5 h-fit flex md:flex-row flex-col md:items-center items-end justify-between gap-4">
+            <div className="flex md:gap-5 gap-2 md:flex-row flex-col md:items-center items-end">
+              <div className="flex items-center gap-3 w-[fit]">
+                <a href="https://www.instagram.com/" className="text-white">
+                  <BsInstagram size={15} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/"
+                  className="text-white"
+                >
+                  <BsLinkedin size={15} />
+                </a>
+                <a href="https://x.com" className="text-white">
+                  <FaXTwitter size={15} />
+                </a>
+              </div>
             </div>
+            <span className="font-[200] text-[0.90em] text-white md:w-fit w-full flex items-start gap-1">
+              &copy; All right reserved Viks Enterprise {date}
+            </span>
           </div>
-          <span className="font-[200] text-[0.90em] text-white md:w-fit w-full flex items-start gap-1">
-            &copy; All right reserved Viks Enterprise {date}
-          </span>
         </div>
       </div>
     </footer>
