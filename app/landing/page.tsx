@@ -17,6 +17,28 @@ export default function Landing() {
   };
 
   useEffect(() => {
+    if (!window.location.hash) return;
+
+    const id = window.location.hash.substring(1);
+
+    const scroll = () => {
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    };
+
+    // wait for hydration
+    requestAnimationFrame(() => {
+      setTimeout(scroll, 100);
+    });
+  }, []);
+
+  useEffect(() => {
     setIsMounted(true);
 
     checkWindowWIdth();
@@ -29,7 +51,7 @@ export default function Landing() {
   return (
     <>
       {!mobile ? (
-        <section className="relative overflow-hidden bg-[#12192f]">
+        <section className="relative overflow-hidden bg-[#12192f]" id="home">
           <div className="grid grid-cols-2 min-h-[658px]">
             <div className="relative flex items-center justify-center px-8 lg:px-20 py-20 z-1">
               <div className="w-xl text-white px-5 relative z-1 flex flex-col">
@@ -67,7 +89,10 @@ export default function Landing() {
           </div>
         </section>
       ) : (
-        <div className="relative w-full h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/hero.jpeg)]">
+        <section
+          className="relative w-full h-svh bg-no-repeat bg-cover bg-center bg-[url(/img/hero.jpeg)]"
+          id="home"
+        >
           <div className="w-full flex flex-col items-center gap-5 px-5 absolute h-full w-full bg-[#00000080] pt-6">
             <div className="text-white w-full flex flex-col items-center gap-5 pt-6 mt-5">
               <h1 className="text-3xl font-extrabold leading-[155%] uppercase mt-7 pt-5">
@@ -88,7 +113,7 @@ export default function Landing() {
               </a>
             </div>
           </div>
-        </div>
+        </section>
       )}
       <section className="w-full my-5">
         <div className="flex items-center w-full justify-center p-3 my-3 pb-6 flex-col gap-8">
@@ -111,10 +136,10 @@ export default function Landing() {
             {WE.map((item, i) => (
               <motion.div
                 whileInView={"visible"}
-                transition={{ duration: 1.2 }}
+                transition={{ duration: 2, delay: i * 0.2 }}
                 initial="hidden"
                 variants={{
-                  hidden: { y: 20 },
+                  hidden: { y: 60 },
                   visible: { y: 0 },
                 }}
                 className="h-[fit] w-full flex flex-col gap-3"
@@ -138,23 +163,59 @@ export default function Landing() {
           <div className="max-w-7xl mx-auto grid sm:grid-cols-2">
             <div className="flex items-center px-8 lg:px-20 py-20">
               <div className="max-w-md text-white flex flex-col">
-                <h2 className="text-4xl font-bold uppercase mb-8">About Us</h2>
-                <p className="text-base leading-8">
+                <motion.h2
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+                  className="text-4xl font-bold uppercase mb-8"
+                >
+                  About Us
+                </motion.h2>
+                <motion.p
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { x: -100 },
+                    visible: { x: 0 },
+                  }}
+                  className="text-base leading-8"
+                >
                   Viks Enterprise Ltd is a UK-based company dedicated to
                   delivering innovative solutions across technology,
                   professional services and creative industries.
-                </p>
-                <p className="text-base leading-8 mt-6">
+                </motion.p>
+                <motion.p
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+                  className="text-base leading-8 mt-6"
+                >
                   Established with a vision to build sustainable and impactful
                   businesses, Viks Enterprise serves as the parent company
                   overseeing a growing portfolio of ventures.
-                </p>
-                <a
+                </motion.p>
+                <motion.a
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { x: -100 },
+                    visible: { x: 0 },
+                  }}
                   href="/about"
                   className="mt-5 bg-[#C8A96A] hover:bg-[#bf9b4e] text-white font-semibold px-10 py-3 w-fit rounded"
                 >
                   Learn More
-                </a>
+                </motion.a>
               </div>
             </div>
 
@@ -167,7 +228,7 @@ export default function Landing() {
                 width={500}
               />
 
-              <div className="absolute left-[-2em] -top-12 w-[41em] bg-[#F5F5F5] rotate-[9deg] h-[140em]"></div>
+              <div className="absolute left-[-1.4em] -top-[22em] w-[50em] bg-[#ffffff] rotate-[9deg] h-[142em]"></div>
             </div>
           </div>
         </section>
@@ -176,23 +237,59 @@ export default function Landing() {
           <div className="max-w-7xl mx-auto grid">
             <div className="flex items-center px-5 py-10">
               <div className="max-w-md text-white flex flex-col">
-                <h2 className="text-3xl font-bold uppercase mb-6">About Us</h2>
-                <p className="text-base leading-7">
+                <motion.h2
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { x: -100 },
+                    visible: { x: 0 },
+                  }}
+                  className="text-3xl font-bold uppercase mb-6"
+                >
+                  About Us
+                </motion.h2>
+                <motion.p
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+                  className="text-base leading-7"
+                >
                   Viks Enterprise Ltd is a UK-based company dedicated to
                   delivering innovative solutions across technology,
                   professional services and creative industries.
-                </p>
-                <p className="text-base leading-7 mt-4">
+                </motion.p>
+                <motion.p
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { scale: 0 },
+                    visible: { scale: 1 },
+                  }}
+                  className="text-base leading-7 mt-4"
+                >
                   Established with a vision to build sustainable and impactful
                   businesses, Viks Enterprise serves as the parent company
                   overseeing a growing portfolio of ventures.
-                </p>
-                <a
+                </motion.p>
+                <motion.a
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { x: -100 },
+                    visible: { x: 0 },
+                  }}
                   href="/about"
                   className="mt-5 bg-[#C8A96A] hover:bg-[#bf9b4e] text-white font-semibold px-10 py-3 w-fit rounded"
                 >
                   Learn More
-                </a>
+                </motion.a>
               </div>
             </div>
 
@@ -232,13 +329,20 @@ export default function Landing() {
               </div>
               <div className="grid md:grid-cols-2 grid-cols md:items-center items-start justify-start md:w-[80%] w-full gap-6 md:px-7 px-1">
                 {COMPANIES.map((item, i) => (
-                  <motion.div
-                    whileInView={"visible"}
-                    initial="hidden"
-                    transition={{ duration: 1 }}
-                    key={i}
+                  <div
+                    className={`${i === 2 ? "md:col-span-2 col-span-1 flex items-center justify-center" : "w-full"}`}
                   >
-                    <div className="flex flex-col gap-2 w-full rounded-lg shadow-md h-[fit] overflow-hidden">
+                    <motion.div
+                      whileInView={"visible"}
+                      initial="hidden"
+                      transition={{ duration: 1, delay: i * 0.2 }}
+                      variants={{
+                        hidden: { y: 60 },
+                        visible: { y: 0 },
+                      }}
+                      key={i}
+                      className={`flex flex-col gap-2 w-full rounded-lg shadow-md h-[fit] overflow-hidden ${i === 2 ? "md:w-[50%] w-full" : "w-full"}`}
+                    >
                       <Image
                         className="w-full h-84"
                         src={`${item.img}`}
@@ -258,8 +362,8 @@ export default function Landing() {
                           Visit our website
                         </a>
                       </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </div>
                 ))}
               </div>
             </div>

@@ -160,19 +160,38 @@ export default function About() {
           <div className="max-w-7xl mx-auto grid sm:grid-cols-2">
             <div className="flex items-center px-8 lg:px-20 py-20">
               <div className="max-w-md text-white flex flex-col">
-                <h2 className="text-4xl font-bold uppercase mb-8">
+                <motion.h2
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { x: -100 },
+                    visible: { x: 0 },
+                  }}
+                  className="text-4xl font-bold uppercase mb-8"
+                >
                   Why choose us
-                </h2>
+                </motion.h2>
                 <div className="flex flex-col gap-5 mt-3">
                   {WHY.map((item, i) => (
-                    <div className="flex items-center gap-5" key={i}>
+                    <motion.div
+                      whileInView={"visible"}
+                      transition={{ duration: 1.2 }}
+                      initial="hidden"
+                      variants={{
+                        hidden: { scale: 0 },
+                        visible: { scale: 1 },
+                      }}
+                      className="flex items-center gap-5"
+                      key={i}
+                    >
                       <div className="h-7 w-7 rounded-full bg-[#C8A96A] relative flex items-start justify-end">
                         <div className="absolute -end-2 rounded-full p-1 border border-white">
                           <BiCheck size={14} />
                         </div>
                       </div>
                       <span className="text-base">{item}</span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -187,7 +206,7 @@ export default function About() {
                 width={500}
               />
 
-              <div className="absolute left-[-2em] -top-12 w-[41em] bg-[#ffffff] rotate-[9deg] h-[140em]"></div>
+              <div className="absolute left-[-1.4em] -top-[22em] w-[50em] bg-[#ffffff] rotate-[9deg] h-[142em]"></div>
             </div>
           </div>
         </section>
@@ -196,19 +215,38 @@ export default function About() {
           <div className="max-w-7xl mx-auto grid">
             <div className="flex items-center px-5 py-10">
               <div className="max-w-md text-white flex flex-col">
-                <h2 className="text-3xl font-bold uppercase mb-8">
+                <motion.h2
+                  whileInView={"visible"}
+                  transition={{ duration: 1.2 }}
+                  initial="hidden"
+                  variants={{
+                    hidden: { x: -100 },
+                    visible: { x: 0 },
+                  }}
+                  className="text-3xl font-bold uppercase mb-8"
+                >
                   Why choose us
-                </h2>
+                </motion.h2>
                 <div className="flex flex-col gap-5 mt-3">
                   {WHY.map((item, i) => (
-                    <div className="flex items-center gap-5" key={i}>
+                    <motion.div
+                      whileInView={"visible"}
+                      transition={{ duration: 1.2 }}
+                      initial="hidden"
+                      variants={{
+                        hidden: { scale: 0 },
+                        visible: { scale: 1 },
+                      }}
+                      className="flex items-center gap-5"
+                      key={i}
+                    >
                       <div className="h-7 w-7 rounded-full bg-[#C8A96A] relative flex items-start justify-end">
                         <div className="absolute -end-2 rounded-full p-1 border border-white">
                           <BiCheck size={14} />
                         </div>
                       </div>
                       <span className="text-base">{item}</span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>

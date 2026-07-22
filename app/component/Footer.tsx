@@ -10,11 +10,33 @@ export default function Footer() {
   const [date, setDate] = useState<number>(0);
 
   useEffect(() => {
+      if (!window.location.hash) return;
+  
+      const id = window.location.hash.substring(1);
+  
+      const scroll = () => {
+        const element = document.getElementById(id);
+  
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      };
+  
+      // wait for hydration
+      requestAnimationFrame(() => {
+        setTimeout(scroll, 100);
+      });
+    }, []);
+
+  useEffect(() => {
     const date = new Date().getFullYear();
     setDate(date);
   }, []);
   return (
-    <footer className="w-full h-fit bg-[#F5F7FA]">
+    <footer className="w-full md:h-screen h-svh bg-[#F5F7FA]" id="contact">
       <div className="w-full flex items-center justify-between flex-col h-full">
         <div className="w-full px-5 py-3 flex items-center justify-center px-1 mb-5 pb-5">
           <div className="md:w-[90%] w-full flex flex-col justify-between items-start md:gap-6 gap-7 py-6 flex-wrap">
@@ -59,15 +81,15 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              <div className="w-full flex flex-col gap-3" id="contact">
+              <div className="w-full flex flex-col gap-3 md:col-span-1 col-span-2">
                 <span className="text-lg uppercase font-bold">Contact</span>
                 <div className="flex w-full flex-col gap-2">
                   <a
-                    href="mailto:viksenterprise@gmail.com"
-                    className="flex items-center font-[200] text-[0.90em] text-black gap-1"
+                    href="mailto:support@viksenterprise.co.uk"
+                    className="flex items-center font-[200] text-[0.90em] text-black gap-1 w-full"
                   >
                     <FiMail size={19} />
-                    viksenterprise@gmail.com
+                    support@viksenterprise.co.uk
                   </a>
                   <a
                     href="tel:+447823972770"
@@ -81,7 +103,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="w-full text-center bg-[#0F172A] p-5 h-full flex md:flex-row flex-col md:items-center items-end justify-between mt-5 gap-4">
+        <div className="w-full text-center bg-[#0F172A] p-5 h-fit flex md:flex-row flex-col md:items-center items-end justify-between mt-5 gap-4">
           <div className="flex md:gap-5 gap-2 md:flex-row flex-col md:items-center items-end">
             <div className="flex items-center gap-3 w-[fit]">
               <a href="https://www.instagram.com/" className="text-white">
